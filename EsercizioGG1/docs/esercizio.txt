@@ -1,0 +1,6 @@
+1. Nel client caricare il MessageSender come Autowired
+2. Spostare la configurazione del bean MessageSender nel contesto di test per poter effettuare i seguenti test:
+	- Testare MailSender
+	- Testare SMSSender
+	- Creare un nuovo Sender nell'app main WhatsappSender
+	- Testare WhatsappSender
