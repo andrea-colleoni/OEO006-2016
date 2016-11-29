@@ -1,0 +1,7 @@
+1. Mappare la tabella Azienda creando un JavaBean che rappresenti i record
+2. Creare un Dao con i metodi 
+	-all()
+	-perId(int id)
+3. Configurare spring-jdbc conme in GG2
+4. Usare jdbcTemplate nel Dao per fare le due query
+5. Creare un client che usi AziendaDao
