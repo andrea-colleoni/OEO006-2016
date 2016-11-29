@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+    	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+    	<property name="url" value="jdbc:mysql://192.168.5.153:3307/ubiquity?useSSL=false"></property>
+    	<property name="username" value="ubiquity"></property>
+    	<property name="password" value="password"></property>
+    </bean>
+    
+    <bean name="personaDao" class="it.ubiquity.spring.gg2dati.PersonaDao" scope="singleton">
+    	<property name="dataSource" ref="dataSource"></property>
+    </bean>
+    
+    <bean class="it.ubiquity.spring.gg2dati.Client" scope="singleton">
+    	<property name="personaDao" ref="personaDao"></property>
+    </bean>
+</beans>

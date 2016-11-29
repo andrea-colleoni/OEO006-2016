@@ -3,9 +3,13 @@ package it.ubiquity.spring.esgg1;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Client {
 
 	List<Messaggio> elencoMessaggi;
+	
+	@Autowired
 	MessageSender sender;
 
 //	public static void main(String[] args) {

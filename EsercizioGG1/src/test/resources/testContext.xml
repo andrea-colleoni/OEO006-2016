@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-	
+	<bean name="sender" class="it.ubiquity.spring.esgg1.SMSSender" scope="prototype" />
 
 	<import resource="applicationContext.xml"/>	
 </beans>
